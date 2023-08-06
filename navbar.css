@@ -5,20 +5,44 @@
 }
 
 nav {
-  --width: 15ch;
-  --navBackgroundColor: #e3e3e3;
-  --menuItemColor: #5a5a5a;
-  --menuItemLineHeight: 3em;
+  --navFontSize: 15px;
+  --navDropDownWidth: 15ch;
+  --navDropDownBackgroundColor: #e3e3e3;
+  --menuItemColor: #000000;
+  --menuItemLineHeight: 1.5;
   --navBurgerHeight: 20px;
   --navBurgerWidth: 20px;
-  --navBurgerColor: #000000;
+  --navBurgerColor: #fff;
+  --navFontFamily: sans;
   display: flex ;
-  flex-direction: column;
+  flex-direction: row;
+  background-color: #2e2d2d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ nav #insertNavBurger {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+ }
+
+nav h2 {
+  font-size: var(--navFontSize);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: white;
+}
+nav h2:hover {
+  background-color: #000000;
 }
 
+
+
 nav ul {
-  width: var(--width);
-  background-color: var(--navBackgroundColor);
+  width: var(--navDropDownWidth);
+  background-color: var(--navDropDownBackgroundColor);
 }
 
 nav ul li {
@@ -28,6 +52,7 @@ nav li a {
   line-height: var(--menuItemLineHeight);
   color: var(--menuItemColor);
   text-decoration: none;
+  font-size: var(--navFontSize);
 }
 
 nav li a:hover {
