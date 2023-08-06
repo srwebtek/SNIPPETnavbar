@@ -10,10 +10,10 @@ nav {
   --navBurgerHeight: 20px;
   --navBurgerWidth: 20px;
   --navBurgerColor: #fff;
-  --navDropDownWidth: 30ch;
+  --navDropDownWidth: 340px;
   --navDropDownBackgroundColor: #e3e3e3;
   --navDropDownFontColor: #000000;
-  --navDropDownLineHeight: 2;
+  
 
   display: flex;
   flex-direction: column;
@@ -36,7 +36,6 @@ nav {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
-
 }
 .navTopRow p {
   font-size: var(--navFontSize);
@@ -55,6 +54,10 @@ nav {
   padding-bottom: 0.5rem;
 }
 
+.navMainRow a {
+  text-decoration: none;
+}
+
 .navMainRow h2 {
   font-size: var(--navFontSize);
   padding-left: 1.5rem;
@@ -67,25 +70,7 @@ nav {
   background-color: #000000;
 }
 
-nav ul {
-  width: var(--navDropDownWidth);
-  background-color: var(--navDropDownBackgroundColor);
-}
-
-nav ul li {
-  list-style: none;
-}
-nav li a {
-  line-height: var(--navDropDownLineHeight);
-  color: var(--navDropDownFontColor);
-  text-decoration: none;
-  font-size: var(--navFontSize);
-}
-
-nav li a:hover {
-  box-shadow: #808080 4px 4px 2px;
-}
-
+/* Burger */
 #navMainMenuBurger {
   width: 40px;
   height: 30px;
@@ -102,12 +87,34 @@ nav li a:hover {
   border-radius: 2px;
 }
 #navMainMenuBurger::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px;
   height: 30px;
   background: transparent;
   z-index: 1;
+}
+
+/* dropdown */
+.navDropDownMenu ul {
+  width: var(--navDropDownWidth);
+  background-color: var(--navDropDownBackgroundColor);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navDropDownMenu li a {
+  display: block;
+  color: var(--navDropDownFontColor);
+  text-decoration: none;
+  font-size: var(--navFontSize);
+  padding-left: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.navDropDownMenu li a:hover {
+  background-color: red;
 }
 
 
