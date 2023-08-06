@@ -6,39 +6,66 @@
 
 nav {
   --navFontSize: 15px;
-  --navDropDownWidth: 15ch;
-  --navDropDownBackgroundColor: #e3e3e3;
-  --menuItemColor: #000000;
-  --menuItemLineHeight: 1.5;
+  --navFontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --navBurgerHeight: 20px;
   --navBurgerWidth: 20px;
   --navBurgerColor: #fff;
-  --navFontFamily: sans;
-  display: flex ;
-  flex-direction: row;
-  background-color: #2e2d2d;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
- nav #insertNavBurger {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
- }
+  --navDropDownWidth: 30ch;
+  --navDropDownBackgroundColor: #e3e3e3;
+  --navDropDownFontColor: #000000;
+  --navDropDownLineHeight: 2;
 
-nav h2 {
-  font-size: var(--navFontSize);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--navFontFamily);
+}
+.navTopRow {
+  width: 100vw;
+  background-color: red;
+  font-family: var(--navFontFamily);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navTopRow a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+
+}
+.navTopRow p {
+  font-size: var(--navFontSize);
+}
+
+.navMainRow {
+  display: flex;
+  flex-direction: row;
+  background-color: #252525;
+}
+
+.navMainRow #navMainMenuBurger {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navMainRow h2 {
+  font-size: var(--navFontSize);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: white;
 }
-nav h2:hover {
+.navMainRow h2:hover {
   background-color: #000000;
 }
-
-
 
 nav ul {
   width: var(--navDropDownWidth);
@@ -49,27 +76,38 @@ nav ul li {
   list-style: none;
 }
 nav li a {
-  line-height: var(--menuItemLineHeight);
-  color: var(--menuItemColor);
+  line-height: var(--navDropDownLineHeight);
+  color: var(--navDropDownFontColor);
   text-decoration: none;
   font-size: var(--navFontSize);
 }
 
 nav li a:hover {
   box-shadow: #808080 4px 4px 2px;
-  
 }
 
-summary {
-  list-style: none;
-  width: fit-content;
-  line-height: normal;
+#navMainMenuBurger {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-svg {
-  height: var(--navBurgerHeight);
-  width: var(--navBurgerWidth);
-  stroke: var(--navBurgerColor);
-  stroke-width: 14;
-  stroke-linecap: round;
+#navMainMenuBurger .line {
+  width: 15px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
 }
+#navMainMenuBurger::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  z-index: 1;
+}
+
+

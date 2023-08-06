@@ -8,55 +8,66 @@
     <script src="navbar.js" async></script>
   </head>
   <body>
-    <nav>
-      <div id="insertNavBurger" onclick="openMenu('navMainDropDown')"></div>
-      <h2>HTML</h2>
-      <h2>CSS</h2>
-      <h2>JS</h2>
-      <h2>HTML</h2>
-      <h2>JSON</h2>
-      <h2>SEO</h2>
+    <nav class="flex-column">
+      <div class="navTopRow">
+        <a href="">TEK++</a>
+        <a href=""><p>Menu</p></a>
+      </div>
 
-      <ul id="navMainDropDown" style="display: none">
-        <li><a href="">HTML</a></li>
-        <li><a href="">CSS</a></li>
-        <li><a href="">JavaScript</a></li>
-        <li><a href="">JSON</a></li>
-        <li><a href="">htaccess</a></li>
-      </ul>
+      <div class="navMainRow">
+        <div id="navMainMenuBurger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <a href="H"><h2>HTML</h2></a>
+        <a href="C"><h2>CSS</h2></a>
+        <a href="JS"><h2>JAVASCRIPT</h2></a>
+        <a href="J"><h2>JSON</h2></a>
+        <a href="H"><h2>HTACCESS</h2></a>
+        <a href="S"><h2>SITEMAP</h2></a>
+        <a href="R"><h2>ROBOTS.TXT</h2></a>
+      </div>
+      <div class="navDropDownMenu">
+        <ul id="navMainDropDown" style="display: none">
+          <li><a href="">Sitemap: Minimal</a></li>
+          <li><a href="">Sitemap: Detailed</a></li>
+          <li><a href="">Sitemap: With Images</a></li>
+          <li><a href="">What Goes Into A Sitemap</a></li>
+          <li><a href="">How Can I Create a Sitemap</a></li>
+          <li><a href="">What Is The Use Of Sitemap In SEO</a></li>
+        </ul>
+      </div>
     </nav>
 
     <script>
-      const navBurger = `        
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 80">
-                <line x1="10" y1="10" x2="90" y2="10" />
-                <line x1="10" y1="40" x2="90" y2="40" />
-                <line x1="10" y1="70" x2="90" y2="70" />
-            </svg>
-        
-        `;
-      document.getElementById("insertNavBurger").innerHTML = navBurger;
+      var dropdownContent = document.getElementById("navMainDropDown");
+      var dropdownButton = document.getElementById("navMainMenuBurger");
 
-
-
-      
-      function openMenu(data) {
-        const toggle = document.getElementById(data);
-        if (toggle.style.display == "none") {
-          toggle.style.display = "block";
-        } else {
-          toggle.style.display = "none";
-        }
+      function showDropdown() {
+        dropdownContent.style.display = "block";
       }
 
-      // function toggleView(data) {
-      //   const toggle = document.getElementById(data);
-      //   if (toggle.style.display == "none") {
-      //     toggle.style.display = "block";
-      //   } else {
-      //     toggle.style.display = "none";
-      //   }
-      // }
+      function hideDropdown() {
+        dropdownContent.style.display = "none";
+      }
+
+      dropdownButton.addEventListener("click", function (event) {
+        if (dropdownContent.style.display === "none") {
+          showDropdown();
+        } else {
+          hideDropdown();
+        }
+      });
+
+      window.addEventListener("click", function (event) {
+        if (
+          event.target !== dropdownContent &&
+          event.target !== dropdownButton
+        ) {
+          hideDropdown();
+        }
+      });
     </script>
   </body>
 </html>
