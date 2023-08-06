@@ -9,16 +9,14 @@
   </head>
   <body>
     <nav>
-      <details>
-        <summary id="insertNavBurger"></summary>
-        <ul>
-          <li><a href="">HTML</a></li>
-          <li><a href="">CSS</a></li>
-          <li><a href="">JavaScript</a></li>
-          <li><a href="">JSON</a></li>
-          <li><a href="">htaccess</a></li>
-        </ul>
-      </details>
+      <div id="insertNavBurger" onclick="openMenu('navMainDropDown')"></div>
+      <ul id="navMainDropDown" style="display: none">
+        <li><a href="">HTML</a></li>
+        <li><a href="">CSS</a></li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">JSON</a></li>
+        <li><a href="">htaccess</a></li>
+      </ul>
     </nav>
 
     <script>
@@ -31,6 +29,27 @@
         
         `;
       document.getElementById("insertNavBurger").innerHTML = navBurger;
+
+
+
+      
+      function openMenu(data) {
+        const toggle = document.getElementById(data);
+        if (toggle.style.display == "none") {
+          toggle.style.display = "block";
+        } else {
+          toggle.style.display = "none";
+        }
+      }
+
+      // function toggleView(data) {
+      //   const toggle = document.getElementById(data);
+      //   if (toggle.style.display == "none") {
+      //     toggle.style.display = "block";
+      //   } else {
+      //     toggle.style.display = "none";
+      //   }
+      // }
     </script>
   </body>
 </html>

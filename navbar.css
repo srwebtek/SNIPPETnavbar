@@ -8,12 +8,12 @@ nav {
   --width: 15ch;
   --navBackgroundColor: #e3e3e3;
   --menuItemColor: #5a5a5a;
-  --menuItemLineHeight: 2em;
-  --navBurgerHeight: 80px;
-  --navBurgerWidth: 80px;
+  --menuItemLineHeight: 3em;
+  --navBurgerHeight: 20px;
+  --navBurgerWidth: 20px;
   --navBurgerColor: #000000;
   display: flex ;
-  justify-content: end;
+  flex-direction: column;
 }
 
 nav ul {
@@ -28,8 +28,8 @@ nav li a {
   line-height: var(--menuItemLineHeight);
   color: var(--menuItemColor);
   text-decoration: none;
-  width: 100px;
 }
+
 nav li a:hover {
   box-shadow: #808080 4px 4px 2px;
   
@@ -45,6 +45,6 @@ svg {
   height: var(--navBurgerHeight);
   width: var(--navBurgerWidth);
   stroke: var(--navBurgerColor);
-  stroke-width: 10;
+  stroke-width: 14;
   stroke-linecap: round;
 }
