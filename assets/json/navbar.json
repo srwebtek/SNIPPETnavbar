@@ -1,0 +1,42 @@
+{
+  "mainNavigation": [
+    {
+      "link": "#",
+      "title": "SITEMAP",
+      "pages": [
+        {
+          "link": "#",
+          "title": "Sitemap: Minimal"
+        },
+        {
+          "link": "#",
+          "title": "Sitemap: Detailed"
+        },
+        {
+          "link": "#",
+          "title": "Sitemap: With Images"
+        },
+        {
+          "link": "#",
+          "title": "What Goes Into A Sitemap"
+        },
+        {
+          "link": "#",
+          "title": "How Can I Create a Sitemap"
+        },
+        {
+          "link": "#",
+          "title": "What Is The Use Of Sitemap In SEO"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "title": "HTML"
+    },
+    {
+      "link": "#",
+      "title": "CSS"
+    }
+  ]
+}
