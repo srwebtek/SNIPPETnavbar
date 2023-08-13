@@ -4,42 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sitemap</title>
-    <link rel="stylesheet" href="../assets/style/navbar.css" />
-    <script src="../assets/js/navbar.js" async></script>
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <script src="../assets/js/app.js" async></script>
+    <script  type="module" src="../assets/js/navbar.js" async></script>
   </head>
   <body>
     <nav class="flex-column">
-      <div class="navTopRow">
-        <a href="../index.html">TEK++</a>
-        <a href=""><p>Menu</p></a>
-      </div>
-
-      <div class="navMainRow">
-        <div id="navMainMenuBurger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <a href="H"><h2>HTML</h2></a>
-        <a href="C"><h2>CSS</h2></a>
-        <a href="JS"><h2>JAVASCRIPT</h2></a>
-        <a href="J"><h2>JSON</h2></a>
-        <a href="H"><h2>HTACCESS</h2></a>
-        <a href="S"><h2>SITEMAP</h2></a>
-        <a href="R"><h2>ROBOTS.TXT</h2></a>
-      </div>
-      <div class="navDropDownMenu">
-        <ul id="navMainDropDown" style="display: none">
-          <li><a href="">Sitemap: Minimal</a></li>
-          <li><a href="">Sitemap: Detailed</a></li>
-          <li><a href="">Sitemap: With Images</a></li>
-          <li><a href="">What Goes Into A Sitemap</a></li>
-          <li><a href="">How Can I Create a Sitemap</a></li>
-          <li><a href="">What Is The Use Of Sitemap In SEO</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <script></script>
+      <div id="topRow"></div>
+      <div id="navMainRow"></div>
+      <ul id="dropDownMenu"></ul>
+    </nav>    
   </body>
 </html>
